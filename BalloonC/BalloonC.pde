@@ -3,14 +3,19 @@
 // create window size
   //setup background color
     //create balloon
+      //make balloon float
+int i ; //setup variable i
 void setup()
 {
-  size(1000,1000);
+  size(1000,1000); //setup window size
+  i = -300 ; //setup start i
 }
 void draw()
 {
-  background(#FFFFFF);
-  balloon(150,500,150,150); //balloon size
+  background(#FFFFFF); //setup background color
+  balloon(150,500-i,150,150); //balloon size
+  i = i+10; //set change i
+  redraw(); //use redraw 
 }
 void balloon(int x,int y,int w,int h)
 {
