@@ -4,7 +4,9 @@
   //setup background color
     //create balloon
       //make balloon float
+        //change balloon color
 int i ; //setup variable i
+color bc = color( random(0,255), random(0,255), random(0,255), random(0,255)); //setup balloon color
 void setup()
 {
   size(1000,1000); //setup window size
@@ -19,6 +21,7 @@ void draw()
 }
 void balloon(int x,int y,int w,int h)
 {
+    fill(bc); //fill balloon color
     ellipse(x,y,w,h); //circle size and place
     line(x,y+(h/2),x,y+(h/2)+50); //line size and place
 }
